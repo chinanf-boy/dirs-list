@@ -5,11 +5,11 @@ let cdTop = '/Users/lizhenyong/Desktop/JSJSJSJSJSJJSJS——project'
 
 test('list this project', async t => {
 	let res = await m(__dirname, ["*node_modules"])
-	t.is(res.length, 2)
+	t.is(!!res.length, true)
 });
 
 
 test('list this project', async t => {
 	let res = await m(__dirname, "*node_modules")
-	t.is(res.length, 2)
+	t.is(!!res.length, true)
 });
