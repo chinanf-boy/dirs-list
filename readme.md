@@ -24,7 +24,7 @@ yarn add dirs-list
 ```js
 const dirsList = require('dirs-list');
 
-let res = await m(__dirname, ["*node_modules"])
+let res = await dirsList(__dirname, ["*node_modules"])
 //=> __dirname all node_modules
 ```
 
