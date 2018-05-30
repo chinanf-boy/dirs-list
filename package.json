@@ -1,0 +1,63 @@
+{
+	"name": "dirs-list",
+	"version": "0.0.0",
+	"description": "get dir path list",
+	"license": "MIT",
+	"main": "dist/dirs-list.js",
+	"module": "dist/dirs-list.m.js",
+	"repository": "chinanf-boy/dirs-list",
+	"author": {
+		"name": "chinanf-boy",
+		"email": "865501259@qq.com",
+		"url": "llever.com"
+	},
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"test": "nyc ava -v",
+		"dev": "microbundle watch",
+		"precommit": "lint-staged",
+		"prepublish": "npm run build",
+		"build": "microbundle",
+		"pub": "npm run test && npm run npmUp && npm run git",
+		"npmUp": "npm version patch && npm publish",
+		"git": "git push && git push --tags"
+	},
+	"size-limit": [
+		{
+			"path": "dist/dirs-list.js",
+			"gzip": false
+		}
+	],
+	"lint-staged": {
+		"*.{js,json,css,md}": [
+			"prettier --single-quote --trailing-comma es5 --write",
+			"git add"
+		]
+	},
+	"files": [],
+	"keywords": [
+		""
+	],
+	"dependencies": {
+		"matcher": "^1.1.1",
+		"mz": "^2.7.0",
+		"two-log": "^0.0.6",
+		"weoptions": "^0.0.9"
+	},
+	"devDependencies": {
+		"codecov": "^3.0.2",
+		"nyc": "^11.8.0",
+		"lint-staged": "^7.0.0",
+		"microbundle": "^0.4.4",
+		"prettier": "^1.12.1",
+		"ava": "^0.25.0"
+	},
+	"nyc": {
+		"reporter": [
+			"lcov",
+			"text"
+		]
+	}
+}
