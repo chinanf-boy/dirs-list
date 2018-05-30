@@ -42,9 +42,7 @@
 	],
 	"dependencies": {
 		"matcher": "^1.1.1",
-		"mz": "^2.7.0",
-		"two-log": "^0.0.6",
-		"weoptions": "^0.0.9"
+		"mz": "^2.7.0"
 	},
 	"devDependencies": {
 		"codecov": "^3.0.2",
