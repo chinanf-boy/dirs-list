@@ -1,15 +1,13 @@
 import test from 'ava';
 import m from '.';
 
-let cdTop = '/Users/lizhenyong/Desktop/JSJSJSJSJSJJSJS——project'
-
 test('list this project', async t => {
-	let res = await m(__dirname, ["*node_modules"])
+	let res = await m(__dirname, {match:["*node_modules"],ignore:["*.git"]})
 	t.is(!!res.length, true)
 });
 
 
 test('list this project', async t => {
-	let res = await m(__dirname, "*node_modules")
+	let res = await m(__dirname, {match:"*node_modules", ignore:"*.git"})
 	t.is(!!res.length, true)
 });

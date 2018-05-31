@@ -24,14 +24,14 @@ yarn add dirs-list
 ```js
 const dirsList = require('dirs-list');
 
-let res = await dirsList(__dirname, ["*node_modules"])
-//=> __dirname all node_modules
+let res = await dirsList(__dirname, {match:["*node_modules"],ignore:["*.git"]})
+//=> __dirname all node_modules, ignore *.git
 ```
 
 
 ## API
 
-### dirsList(dir, match)
+### dirsList(dir, options)
 
 #### dir
 
@@ -40,12 +40,23 @@ name: | dir
 Type: | `string`
 Desc: | dir path
 
-#### match
+#### options
+
+##### match
 
  name: | match
 ---------|----------
-Type: | `string`|`Array`
-Desc: | match
+Type: | `string`\|`Array`
+Desc: | match every, add the path
+
+- [use matcher](https://github.com/sindresorhus/matcher)
+
+##### ignore
+
+ name: | ignore
+---------|----------
+Type: | `string`\|`Array`
+Desc: | ignore some, pass the path
 
 - [use matcher](https://github.com/sindresorhus/matcher)
 
