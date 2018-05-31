@@ -73,7 +73,6 @@ const Listmd = async (contentDir, options, output = []) => {
 		} else if (isDir) {
 
 			if(!ignorePath){
-				absp.includes("dist")  && console.log(absp)
 				await Listmd(absp, options, output)
 			}
 
