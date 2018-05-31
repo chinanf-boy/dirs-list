@@ -1,6 +1,6 @@
 {
 	"name": "dirs-list",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "get dir path list",
 	"license": "MIT",
 	"main": "dist/dirs-list.js",
