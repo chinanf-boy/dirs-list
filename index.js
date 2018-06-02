@@ -20,6 +20,8 @@ const readMdir = async (Dir) => {
  * @returns output
  */
 const Listmd = async (contentDir, options, output = []) => {
+	contentDir = contentDir || process.cwd()
+
 	let match = options.match || []
 	let ignore = options.ignore || []
 
