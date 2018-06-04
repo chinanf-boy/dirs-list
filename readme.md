@@ -64,6 +64,10 @@ Desc: | ignore some, pass the path
 
 - [node-modules-size](https://github.com/chinanf-boy/node-modules-size) get all node_modules size
 
+<a href="https://patreon.com/yobrave">
+<img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" height="50">
+</a>
+
 ## License
 
 MIT © [chinanf-boy](http://llever.com)
